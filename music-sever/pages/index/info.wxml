@@ -1,0 +1,24 @@
+<view class="content-info-portal">
+        <view>
+            <image src="../../images/04.png"></image>
+            <text>私人FM</text>
+        </view>
+        <view>
+            <image src="../../images/05.png"></image>
+            <text>每日歌曲推荐</text>
+        </view>
+        <view>
+            <image src="../../images/06.png"></image>
+            <text>云音乐新歌榜</text>
+        </view>
+    </view>
+    <!-- 热门音乐 -->
+    <view class="content-info-list">
+        <view class="list-title">热门音乐</view>
+        <view class="list-inner">
+            <view wx:if="{{index<6}}" wx:for="{{playlist}}" wx:key="id" bindtap="change" data-index="{{index}}">
+                <image src="{{item.coverImgUrl}}"></image>
+                <text>{{item.title}}</text>
+            </view>
+        </view>
+    </view> 
